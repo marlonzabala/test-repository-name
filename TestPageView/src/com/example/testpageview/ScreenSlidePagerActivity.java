@@ -13,12 +13,24 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
      * The number of pages (wizard steps) to show in this demo.
      */
     private static final int NUM_PAGES = 5;
+    private ViewPager mPager;
 
     /**
-     * The pager widget, which handles animation and allows swiping horizontally to access previous
-     * and next wizard steps.
+     * The pager adapter, which provides the pages to the view pager widget.
      */
-    private ViewPager mPager;
+
+    /**
+     * The pager adapter, which provides the pages to the view pager widget.
+     */
+
+
+    /**
+     * The pager adapter, which provides the pages to the view pager widget.
+     */
+
+    /**
+     * The pager adapter, which provides the pages to the view pager widget.
+     */
 
     /**
      * The pager adapter, which provides the pages to the view pager widget.
@@ -52,7 +64,6 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_view);
 
-        // Instantiate a ViewPager and a PagerAdapter.
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
@@ -65,7 +76,6 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
             // Back button. This calls finish() on this activity and pops the back stack.
             super.onBackPressed();
         } else {
-            // Otherwise, select the previous step.
             mPager.setCurrentItem(mPager.getCurrentItem() - 1);
         }
     }
